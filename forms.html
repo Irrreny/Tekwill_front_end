@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Submit Form</title>
+        <title>Registration Form</title>
         <style>
-            h1 {font-family:verdana;}
-            h3 {font-family:verdana;}
-            body {font-family: Verdana;}
+            body {font-family: Arial;}
+            legend {
+                background-color: rgb(188, 182, 182);
+                color: black;
+                padding: 5px 10px
+            }
+            fieldset {
+                background-color: #eeeeee;
+            }
         </style>
     </head>  
     <body>
-        <form autocomplete="on">
+        <h3>Registration Form</h3>
+        <form action="/action_page.php" method="get">
             <fieldset>
                 <legend>Basic User Information</legend>
                 <label for="fullname">Full Name:</label>
@@ -22,7 +29,7 @@
                 <input type="password" id="pass" name="pass" placeholder="Password" required>
                 <label for="confpass">Confirm Password:</label>
                 <input type="password" id="confpass" name="confpass" placeholder="Confirm Password" required><br>
-                <span>Gender:</span>
+                <label>Gender:</label>
                 <input type="radio" id="male" name="gender" value="male">
                 <label for="male">Male</label>
                 <input type="radio" id="female" name="gender" value="female">
@@ -31,10 +38,10 @@
                 <label for="other">Other</label><br>
                 <label for="dob">Date of Birth:</label>
                 <input type="date" id="dob" name="dob">
-            </fieldset>
+            </fieldset><br>
             <fieldset>
                 <legend>Address Information</legend>
-                <span>Street Address:</span>
+                <label>Street Address:</label>
                 <textarea name="address" rows="2" cols="20" placeholder="221B Baker Street"></textarea><br>
                 <label for="country">Country:</label>
                 <select id="country" name="country">
@@ -52,10 +59,10 @@
                 <input type="number" id="post" name="post" placeholder="65005"><br>
                 <label for="phone">Telephone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="078 339 158"><br>
-            </fieldset>
+            </fieldset><br>
             <fieldset>
                 <legend>Preferences</legend>
-                <span>Preferred Contact Method:</span>
+                <label>Preferred Contact Method:</label>
                 <input type="checkbox" id="email2" name="method1" value="email">
                 <label for="email2">Email</label>
                 <input type="checkbox" id="phone2" name="method2" value="phone">
@@ -64,7 +71,7 @@
                 <label for="postal">Postal Mail</label><br>
                 <label for="favcolor">Favourite Colour:</label>
                 <input type="color" id="favcolor" name="favcolor" value="#e66465">
-            </fieldset>
+            </fieldset><br>
             <fieldset>
                 <legend>Additional Details</legend>
                 <label for="how">How did you hear about us?</label>
@@ -77,9 +84,9 @@
                     <option value="tv">Advertisement</option>
                     <option value="other">Other</option>
                 </select><br><br>
-                    <span>Feedback/Comments:</span>
+                    <label>Feedback/Comments:</label>
                 <textarea name="address" rows="3" cols="40"></textarea><br>
-            </fieldset>
+            </fieldset><br>
             <fieldset>
                 <legend>Profile</legend>
                 <label for="photo">Choose a Profile Picture</label>
@@ -90,8 +97,8 @@
                 <input type="range" id="range" name="range" min="1" max="10"><br>
                 <small><i>1 - Beginner; 10 - Expert</i></small>
             </fieldset><br>
-            <input type="submit">
-            <input type="reset">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
         </form>
     </body>
 </html>
