@@ -34,11 +34,26 @@
             </fieldset>
             <fieldset>
                 <legend>Address Information</legend>
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required autofocus><br>
+                <span>Street Address:</span>
+                <textarea name="address" rows="3" cols="20" placeholder="221B Baker Street"></textarea><br>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">--Please choose your Country--</option>
+                    <option value="md">Moldova, Republic of</option>
+                    <option value="ua">Ukraine</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="us">United States</option>
+                    <option value="de">Germany</option>
+                    <option value="au">Australia</option>
+                </select><br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="London" required><br>
+                <label for="post">Postal Code:</label>
+                <input type="text" id="post" name="post" placeholder="NW1 6XE"required><br>
             </fieldset>
             <fieldset>
                 <legend>Preferences</legend>
+                <span></span>
             </fieldset>
             <fieldset>
                 <legend>Additional Details</legend>
