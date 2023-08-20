@@ -93,9 +93,10 @@
                 <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png"><br>
                 <label for="url">Website URL:</label>
                 <input type="url" id="url" name="url" placeholder="https://example.com"><br>
-                <label for="range">Experience Level with HTML:</label>
-                <input type="range" id="range" name="range" min="1" max="10"><br>
-                <small><i>1 - Beginner; 10 - Expert</i></small>
+        <label for="experience">Experience Level with HTML:</label>
+        <input
+          type="range" name="experience" id="experience" min="1" max="10" oninput="DisplayValue.value=experience.value" />
+        <output id="DisplayValue"></output>
             </fieldset><br>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
