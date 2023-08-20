@@ -71,7 +71,7 @@
             padding: 8px;
             border-radius: 8px;
             cursor: pointer;
-            width: 30%;
+            width: 25%;
             text-align: center;
         }
         input.reset:hover {
@@ -160,11 +160,11 @@
                 <label for="url">Website URL:</label><br>
                 <input type="url" id="url" name="url" placeholder="https://example.com"><br>
         <label for="experience">Experience Level with HTML:</label>
-        <input style="width: 20%; padding: 0px;" type="range" name="experience" id="experience" min="1" max="10" oninput="DisplayValue.value=experience.value" />
+        <input style="width: 20%; padding: 0px;" type="range" name="experience" id="experience" min="1" max="10" oninput="DisplayValue.value=experience.value">
         <output id="DisplayValue"></output>
             </fieldset><br>
 
-            <input class="submit" "type="submit" value="Submit">
+            <input class="submit" type="submit" value="Submit">
             <input class="reset" type="reset" value="Reset">
         </form>
     </body>
