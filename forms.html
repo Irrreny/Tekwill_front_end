@@ -5,45 +5,108 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration Form</title>
         <style>
-            body {font-family: Arial;}
-            legend {
-                background-color: rgb(188, 182, 182);
-                color: black;
-                padding: 5px 10px
-            }
-            fieldset {
-                background-color: #eeeeee;
-            }
+            body {
+                background-color: rgb(236, 236, 236);
+        }
+            form {
+                background-color: white;
+                padding: 25px;
+                margin-left: 36%;
+                margin-right: 36%;
+        }
+           fieldset {
+            text-align: left;
+            font-size: 14px; 
+            font-family: Helvetica;
+            border-radius: 8px;
+            border: 1px solid #00938e;
+            line-height: 1.8;
+           }
+           legend {
+            color:#00938e; 
+            font-size: 22px; 
+            font-family: Helvetica; 
+            font-style: italic; 
+        }
+        label {
+            font-weight: bold;
+        }
+        label.nobold {
+            font-weight: lighter;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        input, textarea {
+            width: 95%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgb(203, 202, 202);
+            resize: none;
+            margin: auto;
+        }
+        input:hover {
+            border-color: #00938e;
+        }
+        input.nowidth {
+            width: 5%;
+        }
+        input.submit {
+            background-color: rgb(17, 100, 224);
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 25%;
+            text-align: center;
+        }
+        input.submit:hover {
+            background-color: blue;
+        }
+        input.reset {
+            background-color: rgb(149, 148, 148);
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 25%;
+            text-align: center;
+        }
+        input.reset:hover {
+            background-color: grey;
+        }
         </style>
     </head>  
     <body>
-        <h3>Registration Form</h3>
         <form action="/action_page.php" method="get">
             <fieldset>
                 <legend>Basic User Information</legend>
-                <label for="fullname">Full Name:</label>
+                <label for="fullname">Full Name:</label><br>
                 <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required autofocus><br>
-                <label for="email">Email Address:</label>
+                <label for="email">Email Address:</label><br>
                 <input type="email" id="email" name="email" placeholder="name@email.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required><br>
-                <label for="pass">Password:</label>
-                <input type="password" id="pass" name="pass" placeholder="Password" required>
-                <label for="confpass">Confirm Password:</label>
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="pass" placeholder="Password" required><br>
+                <label for="confpass">Confirm Password:</label><br>
                 <input type="password" id="confpass" name="confpass" placeholder="Confirm Password" required><br>
-                <label>Gender:</label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label><br>
-                <label for="dob">Date of Birth:</label>
+                <label>Gender:</label><br>
+                <input class="nowidth" type="radio" id="male" name="gender" value="male">
+                <label class="nobold" for="male">Male</label>
+                <input class="nowidth" type="radio" id="female" name="gender" value="female">
+                <label class="nobold" for="female">Female</label>
+                <input class="nowidth" type="radio" id="other" name="gender" value="other">
+                <label class="nobold" for="other">Other</label><br>
+                <label for="dob">Date of Birth:</label><br>
                 <input type="date" id="dob" name="dob">
             </fieldset><br>
+
             <fieldset>
                 <legend>Address Information</legend>
-                <label>Street Address:</label>
+                <label>Street Address:</label><br>
                 <textarea name="address" rows="2" cols="20" placeholder="221B Baker Street"></textarea><br>
-                <label for="country">Country:</label>
+                <label for="country">Country:</label><br>
                 <select id="country" name="country">
                     <option value="">--Please choose Country--</option>
                     <option value="md">Moldova, Republic of</option>
@@ -53,28 +116,30 @@
                     <option value="de">Germany</option>
                     <option value="au">Australia</option>
                 </select><br>
-                <label for="city">City:</label>
+                <label for="city">City:</label><br>
                 <input type="text" id="city" name="city" placeholder="London"><br>
-                <label for="post">Postal Code:</label>
+                <label for="post">Postal Code:</label><br>
                 <input type="number" id="post" name="post" placeholder="65005"><br>
-                <label for="phone">Telephone Number:</label>
+                <label for="phone">Telephone Number:</label><br>
                 <input type="tel" id="phone" name="phone" placeholder="078 339 158"><br>
             </fieldset><br>
+
             <fieldset>
                 <legend>Preferences</legend>
-                <label>Preferred Contact Method:</label>
-                <input type="checkbox" id="email2" name="method1" value="email">
-                <label for="email2">Email</label>
-                <input type="checkbox" id="phone2" name="method2" value="phone">
-                <label for="phone2">Phone</label>
-                <input type="checkbox" id="postal" name="method3" value="postal">
-                <label for="postal">Postal Mail</label><br>
-                <label for="favcolor">Favourite Colour:</label>
-                <input type="color" id="favcolor" name="favcolor" value="#e66465">
+                <label>Preferred Contact Method:</label><br>
+                <input class="nowidth" type="checkbox" id="email2" name="method1" value="email">
+                <label class="nobold" for="email2">Email</label>
+                <input class="nowidth" type="checkbox" id="phone2" name="method2" value="phone">
+                <label class="nobold" for="phone2">Phone</label>
+                <input class="nowidth" type="checkbox" id="postal" name="method3" value="postal">
+                <label class="nobold" for="postal">Postal Mail</label><br>
+                <label class="nowidth" for="favcolor">Favourite Colour:</label>
+                <input style="padding: 0px; border-radius: 0px; width: 50px;" type="color" id="favcolor" name="favcolor" value="#e66465">
             </fieldset><br>
+
             <fieldset>
                 <legend>Additional Details</legend>
-                <label for="how">How did you hear about us?</label>
+                <label for="how">How did you hear about us?</label><br>
                 <select id="how" name="how">
                     <option value="">--Please choose one--</option>
                     <option value="socmed">Social Media</option>
@@ -84,21 +149,23 @@
                     <option value="tv">Advertisement</option>
                     <option value="other">Other</option>
                 </select><br><br>
-                    <label>Feedback/Comments:</label>
+                    <label>Feedback/Comments:</label><br>
                 <textarea name="address" rows="3" cols="40"></textarea><br>
             </fieldset><br>
+
             <fieldset>
                 <legend>Profile</legend>
                 <label for="photo">Choose a Profile Picture</label>
-                <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png"><br>
-                <label for="url">Website URL:</label>
+                <input style="width: 50%; padding: 0%; border: none; border-radius: 0px; margin: 0px;" type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png"><br>
+                <label for="url">Website URL:</label><br>
                 <input type="url" id="url" name="url" placeholder="https://example.com"><br>
-                <label for="range">Experience Level with HTML:</label>
-                <input type="range" id="range" name="range" min="1" max="10"><br>
-                <small><i>1 - Beginner; 10 - Expert</i></small>
+        <label for="experience">Experience Level with HTML:</label>
+        <input style="width: 20%; padding: 0px;" type="range" name="experience" id="experience" min="1" max="10" oninput="DisplayValue.value=experience.value">
+        <output id="DisplayValue"></output>
             </fieldset><br>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+
+            <input class="submit" type="submit" value="Submit">
+            <input class="reset" type="reset" value="Reset">
         </form>
     </body>
 </html>
